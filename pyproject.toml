@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "excel-agent"
+version = "0.1.0"
+description = "AI Agent for Excel import with multi-worker collaboration"
+authors = [{name = "Your Name", email = "you@example.com"}]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi==0.115.6",
+    "uvicorn[standard]==0.34.0",
+    "pydantic==2.10.4",
+    "pydantic-settings>=2.10.1",
+    "httpx==0.28.1",
+    "python-dotenv==1.0.1",
+    "openpyxl==3.1.5",
+    "tenacity==9.0.0",
+    "langgraph==1.2.6",
+    "langgraph-checkpoint-sqlite==3.1.0",
+    "langchain-community>=0.4.0",  # 升级到 0.4.x 或更高，以兼容 langchain-core 1.x[reference:6][reference:7]
+    "langchain-openai>=1.0.0",      # 升级到 1.x[reference:8][reference:9]
+    "chromadb==1.5.9",
+    "pandas>=2.3.3,<3.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
