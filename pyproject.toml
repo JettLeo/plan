@@ -24,6 +24,8 @@ dependencies = [
     "langchain-openai>=1.0.0",      # 升级到 1.x[reference:8][reference:9]
     "chromadb==1.5.9",
     "pandas>=2.3.3,<3.0.0",
+    "ragas>=0.2.0",
+    "datasets>=2.14.0",   # 用于加载测试集
 ]
 
 [tool.setuptools.packages.find]
