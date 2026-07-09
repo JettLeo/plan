@@ -17,15 +17,16 @@ dependencies = [
     "httpx==0.28.1",
     "python-dotenv==1.0.1",
     "openpyxl==3.1.5",
-    "tenacity==9.0.0",
+    "tenacity>=8.2.3,<9.0.0,!=8.4.0",
     "langgraph==1.2.6",
     "langgraph-checkpoint-sqlite==3.1.0",
-    "langchain-community>=0.4.0",  # 升级到 0.4.x 或更高，以兼容 langchain-core 1.x[reference:6][reference:7]
-    "langchain-openai>=1.0.0",      # 升级到 1.x[reference:8][reference:9]
+    "langchain>=0.3.0",
+    "langchain-community>=0.3.0",
+    "langchain-openai>=1.0.0",
     "chromadb==1.5.9",
     "pandas>=2.3.3,<3.0.0",
-    "ragas>=0.2.0",
-    "datasets>=2.14.0",   # 用于加载测试集
+    "ragas==0.4.3",
+    "datasets>=2.14.0",
 ]
 
 [tool.setuptools.packages.find]
